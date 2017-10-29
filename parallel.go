@@ -19,7 +19,7 @@ func main() {
 var wg sync.WaitGroup
 
 var (
-	concurrent    = 2 * runtime.GOMAXPROCS(runtime.NumCPU())
+	concurrent    = runtime.GOMAXPROCS(runtime.NumCPU())
 	semaphoreChan = make(chan struct{}, concurrent)
 )
 
