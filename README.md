@@ -1,6 +1,6 @@
 # golang-parallel-io
 
-An example of how to write fast parallel file-system programs in Golang.
+A benchmark of filesystem IO and an example of parallel programming in Go.
 
 This includes three programs, `recursive.go`, a naive example of a `find`-style utility, `parallel.go`, a paralellized version that approaches the performance of `find`, and `walk.go`, which uses Go's `filepath.Walk` function.
 
