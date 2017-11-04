@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-	dir := os.Args[1] //"/Users/alexkreidler/go"
+	dir := os.Args[1]
 	fmt.Println(dir)
 	lsFiles(dir)
 }

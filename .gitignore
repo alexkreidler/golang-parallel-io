@@ -19,3 +19,5 @@
 # The built binaries (for benchmarking, etc)
 parallel
 recursive
+walk
+specs

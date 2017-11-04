@@ -8,8 +8,7 @@ import (
 )
 
 func main() {
-	fmt.Println(runtime.NumCPU(), runtime.GOMAXPROCS(runtime.NumCPU()))
-	dir := os.Args[1] //"/Users/alexkreidler/go"
+	dir := os.Args[1]
 	fmt.Println(dir)
 	lsFiles(dir)
 	wg.Add(1)
@@ -39,7 +38,7 @@ func lsFiles(dir string) {
 			fmt.Println("error opening directory", err.Error())
 		}
 		defer file.Close()
-		files, err := file.Readdir(-1)
+		files, err := file.Readdir(-1) // Loads all children files into memory. A more efficient way?
 		if err != nil {
 			fmt.Println("error reading directory", err.Error())
 		}
