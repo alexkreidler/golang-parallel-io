@@ -10,8 +10,8 @@ import (
 func main() {
 	dir := os.Args[1]
 	fmt.Println(dir)
-	lsFiles(dir)
 	wg.Add(1)
+	lsFiles(dir)
 	wg.Wait()
 }
 
